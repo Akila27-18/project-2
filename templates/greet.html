@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="card p-5 mt-5 shadow-lg colorful-card text-center">
+    <h1 class="display-4">{{ greeting }}, <span class="text-primary">{{ name.title() }}</span>!</h1>
+    <p class="lead mt-3">🌍 Language: <strong>{{ lang.upper() }}</strong></p>
+    <a href="/" class="btn btn-success mt-4">Go Back</a>
+</div>
+
+<script>
+    // 🎉 Trigger confetti when greeting is shown
+    window.onload = () => {
+        confetti({
+            particleCount: 100,
+            spread: 70,
+            origin: { y: 0.6 }
+        });
+    };
+</script>
+{% endblock %}

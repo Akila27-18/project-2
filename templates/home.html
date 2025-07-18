@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="card p-5 mt-5 shadow-lg colorful-card text-center">
+    <h2 class="mb-4">🌈 Welcome to the Multilingual Greeting App!</h2>
+    <form action="{{ url_for('submit') }}" method="post" class="w-50 mx-auto">
+        <div class="mb-3">
+            <input type="text" name="name" class="form-control form-control-lg" placeholder="Enter your name" required>
+        </div>
+        <div class="mb-3">
+            <select name="lang" class="form-select form-select-lg">
+                <option value="en">🇺🇸 English</option>
+                <option value="fr">🇫🇷 French</option>
+                <option value="es">🇪🇸 Spanish</option>
+                <option value="ta">🇱🇰 Tamil</option>
+                <option value="hi">🇮🇳 Hindi</option>
+            </select>
+        </div>
+        <button type="submit" class="btn btn-primary btn-lg">Greet Me</button>
+    </form>
+</div>
+{% endblock %}

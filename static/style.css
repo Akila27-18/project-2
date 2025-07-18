@@ -1,0 +1,16 @@
+body {
+    background: linear-gradient(to right, #ffecd2, #fcb69f);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.colorful-card {
+    background: #fff;
+    border-left: 10px solid #6f42c1;
+    border-radius: 15px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.colorful-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+}
